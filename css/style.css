@@ -28,7 +28,7 @@ li {
 
 body {
   font-family: var(--ffMain), sans-serif;
-  padding: 1.5rem 1.5rem 4rem 1.5rem;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
 }
 
 header {
@@ -87,7 +87,8 @@ main {
   cursor: pointer;
 
   &:hover {
-    opacity: 0.8;
+    background-color: var(--veryDarkBlue);
+    color: var(--offWhite);
   }
 }
 
@@ -121,6 +122,11 @@ main {
 .section-two h3 {
   font-weight: var(--fw3);
   font-size: 1.2rem;
+
+  &:hover {
+    color: var(--softOrange);
+    cursor: pointer;
+  }
 }
 
 .section-two p {
@@ -150,11 +156,18 @@ main {
 
 .card .heading {
   font-weight: var(--fw3);
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: var(--veryDarkBlue);
+
+  &:hover {
+    color: var(--softRed);
+    cursor: pointer;
+  }
 }
 
 .card p:not(.heading) {
   line-height: 2;
+  font-size: 15px;
   color: var(--darkGrayishBlue);
 }
 
@@ -174,20 +187,42 @@ main {
   }
 }
 
-.navbar {
-  @media screen and (max-width: 467px) {
-    display: none;
-  }
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  color: var(--darkGrayishBlue);
+}
+
+.nav-links li:hover {
+  cursor: pointer;
+  color: var(--softRed);
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+}
 
-  @media screen and (max-width: 467px) {
+.attribution a {
+  color: var(--softRed);
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .mobile-menu-btn {
     display: none;
   }
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+
+  .attribution {
+    display: none;
+  }
 }
