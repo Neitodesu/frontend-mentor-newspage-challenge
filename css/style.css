@@ -229,7 +229,7 @@ main {
   header .navbar {
     position: static;
     background-color: transparent;
-    transform: translateX(-250px);
+    transform: translateX(-230px);
   }
 
   header .nav-links {
